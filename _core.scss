@@ -1,0 +1,46 @@
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: $primaryFont;
+}
+main {
+    flex: 1;
+}
+// ^ position footer bottom even if screen is higher than page content 
+
+
+.btn {
+	display: inline-block;
+	padding: 1rem 3rem;
+	margin-top: 2rem;
+	color: $white;
+	font-family: $secondaryFont;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 1.6rem;
+	text-align: center;
+	line-height: 1;
+	cursor: pointer;
+	background: $primary;
+	border-radius: $defaultBorderRadius;
+	transition: $defaultTransition;
+	&:hover {
+		background: $white;
+		color: $black;
+	}
+	@media ($msm) {
+		font-size: 1.4rem;
+	}
+}
+
+.formularz {
+	background: red;
+	max-width: 400px;
+}
+
+.content-to-expand {
+	height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+}
